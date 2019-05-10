@@ -1,0 +1,53 @@
+Ejercicios Refactoring
+
+Ejercicio 1 El meu exemple:
+
+Descriu un exemple de canvi de codi teu que es pugui considerar refacció i un 
+altre que no. Pots fer servir codi de qualsevol dels teus exercicis del cicle 
+(especifica la procedència). No oblidis descriure el perquè de la teva 
+classificació basant-te en els conceptes d’aquesta secció.
+
+El siguiente metodo cogido de el Main del ejercicio de ajedrez de M3
+es un ejemplo de refactor ya que al principio se iva a repetir todo el codigo
+excepto por 1 frase. Asi que lo pase a un metodo que al pasarle una frase cambiase
+la frase que debia cambiar y de esta forma poder llamarlo y dejar mas claro
+que hace todo este metodo (seguramente se pueda refactorizar mas)
+
+public static int[] preguntaPos(String frase, String color, Tablero tab) {
+		boolean wellPos = false;
+		int[] posicion = new int[2];
+		while (!wellPos) {
+			boolean wellX = false;
+			boolean wellY = false;
+			System.out.print(frase);
+			try {
+				String pos = reader.readLine();
+				String[] coordenadas = pos.split(" ");
+				posicion[0] = Integer.parseInt(coordenadas[0]);
+				if (posicion[0] >= 0 && posicion[0] <= 7) {
+					wellX = true;
+				} else {
+					System.out.println("Primer numero debe ser entre 0 y 7.");
+				}
+				int invertedY = Integer.parseInt(coordenadas[1]);
+				posicion[1] = 7 - invertedY;
+				if (posicion[1] >= 0 && posicion[1] <= 7) {
+					wellY = true;
+				} else {
+					System.out.println("Segundo numero debe ser entre 0 y 7.");
+				}
+				if (tab.getColor(posicion[0], posicion[1]) == color || tab.getColor(posicion[0], posicion[1]) == " ") {
+					if (wellX && wellY) {
+						wellPos = true;
+					}
+				} else {
+					System.out.println("Selecciona una pieza de tu color.");
+				}
+			} catch (IOException e) {
+				System.out.println("Por favor introduzca la posicion como en el ejemplo. Y solo numeros.");
+			}
+		}
+		return posicion;
+	}
+	
+	Al principio de curso al trabajar sin metodos cuando habia mucho codigo llegava un momento que era incomprensible.
