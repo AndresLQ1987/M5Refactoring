@@ -62,11 +62,11 @@ public class GestorLloguersLite {
 		return date;
 	}
 
-	private static Date dataLloguer(ArrayList<Ejercicio3.Lloguer> Lloguers, int i) {
+	private static Date dataLloguer(ArrayList<Lloguer> Lloguers, int i) {
 		return Lloguers.get(i).getData();
 	}
 	
-	private static int diesLloguer(ArrayList<Ejercicio3.Lloguer> Lloguers, int i) {
+	private static int diesLloguer(ArrayList<Lloguer> Lloguers, int i) {
 		return Lloguers.get(i).getDies();
 	}
 
