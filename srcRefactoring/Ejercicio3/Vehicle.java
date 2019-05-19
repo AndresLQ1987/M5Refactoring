@@ -9,7 +9,7 @@ public class Vehicle {
 	public static Tipo GENERAL = Tipo.GENERAL;
 	public static Tipo LUXE = Tipo.LUXE;
 
-	private enum Tipo {
+	public enum Tipo {
 		BASIC, GENERAL, LUXE
 	}
 

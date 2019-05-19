@@ -30,11 +30,12 @@ public class GestorLloguersLite {
 		client.afegeix(lloguer2);
 		client.afegeix(lloguer3);
 		
-		String informe = informacioClient(client);
+		//String informe = informacioClient(client);
+		String informe = client.informe();
 		System.out.println(informe);
 	}
 
-	public static String informacioClient(Client client) {
+	/*public static String informacioClient(Client client) {
 		String informe = "";
 		informe += "Client: " + client.getNom() + "\n";
 		informe += "\t" + client.getNif() + "\n";
@@ -48,9 +49,9 @@ public class GestorLloguersLite {
 			informe += "\t   dies llogats: " + diesLloguer(client.getLloguers(), i) + "\n";
 		}
 		return informe;
-	}
+	}*/
 	
-	private static Date createDate(String fecha, String format) {
+	public static Date createDate(String fecha, String format) {
 		SimpleDateFormat dateFormat = new SimpleDateFormat(format);
 		Date date = null;
 		try {
@@ -62,7 +63,7 @@ public class GestorLloguersLite {
 		return date;
 	}
 
-	private static Date dataLloguer(ArrayList<Lloguer> Lloguers, int i) {
+	/*private static Date dataLloguer(ArrayList<Lloguer> Lloguers, int i) {
 		return Lloguers.get(i).getData();
 	}
 	
@@ -76,5 +77,5 @@ public class GestorLloguersLite {
 
 	private static Vehicle vehicle(ArrayList<Ejercicio3.Lloguer> Lloguers, int i) {
 		return Lloguers.get(i).getVehicle();
-	}
+	}*/
 }
