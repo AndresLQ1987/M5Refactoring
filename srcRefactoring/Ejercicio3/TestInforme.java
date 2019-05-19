@@ -5,11 +5,6 @@ import java.util.Date;
 import org.junit.*;
 
 public class TestInforme {
-
-	@BeforeClass
-	public void prepararCliente() {
-		
-	}
 	
 	@Test
 	public void clienteSinLloguers() {
@@ -31,7 +26,7 @@ public class TestInforme {
 						  "<p>Informe de lloguers del client <em>Andres</em> (<strong>12345789T</strong>)</p>\n" +
 						  "<table>\n" +
 						  "\t<tr><td><strong>Marca</strong></td><td><strong>Model</strong></td><td><strong>Import</strong></td></tr>\n" +
-						  "</table>" +
+						  "</table>\n" +
 						  "<p>Import a pagar: <em>0.0€</em></p>\n" + 
 						  "<p>Punts guanyats: <em>0</em></p>\n";
 		
@@ -422,7 +417,7 @@ public class TestInforme {
 		client.afegeix(lloguer1);
 
 		// pedimos el informe del cliente.
-		String informe = client.informe();
+		String informe = client.informeHTML();
 		String esperado = "<h1>Informe de lloguers<h1>\n" +
 						  "<p>Informe de lloguers del client <em>Andres</em> (<strong>12345789T</strong>)</p>\n" +
 						  "<table>\n" +
@@ -501,7 +496,7 @@ public class TestInforme {
 		client.afegeix(lloguer1);
 
 		// pedimos el informe del cliente.
-		String informe = client.informe();
+		String informe = client.informeHTML();
 		String esperado = "<h1>Informe de lloguers<h1>\n" +
 						  "<p>Informe de lloguers del client <em>Andres</em> (<strong>12345789T</strong>)</p>\n" +
 						  "<table>\n" +
