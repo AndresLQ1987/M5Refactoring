@@ -3,12 +3,13 @@ package Ejercicio3;
 import java.util.ArrayList;
 
 public class Client {
+	
+	private static final double EUROS_PER_UNITAT_DE_COST = 30;
+	
 	private String nif;
 	private String nom;
 	private String telefon;
 	private ArrayList<Lloguer> lloguers;
-	
-	private static final double EUROS_PER_UNITAT_DE_COST = 30;
 
 	public Client(String nif, String nom, String telefon) {
 		this.nif = nif;
