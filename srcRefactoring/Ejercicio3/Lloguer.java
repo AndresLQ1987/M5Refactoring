@@ -53,4 +53,31 @@ public class Lloguer {
 			return false;
 		}
 	}
+	
+	/*
+	 *  Ya no le pasamos el lloguer ya que es el propio lloguer el que calcula la 
+	 *  quantitat y el sabe sus atributos por lo que no es necesario pasarselo por
+	 *  parametros.
+	 */
+	public double quantitat() {
+		double quantitat = 0;
+		switch (vehicle.getCategoria()) {
+        case BASIC:
+            quantitat += 3;
+            if (dies > 3) {
+                quantitat += (dies - 3) * 1.5;
+            }
+            break;
+        case GENERAL:
+            quantitat += 4;
+            if (dies > 2) {
+                quantitat += (dies - 2) * 2.5;
+            }
+            break;
+        case LUXE:
+            quantitat += dies * 6;
+            break;
+		}
+		return quantitat;
+	}
 }
