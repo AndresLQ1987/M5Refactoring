@@ -63,15 +63,12 @@ public class Client {
 		int bonificacions = 0;
 		String resultat = "Informe de lloguers del client " + getNom() + " (" + getNif() + ")\n";
 		for (Lloguer lloguer : lloguers) {
-			// calculem la quantitat per cada lloguer
-			double quantitat = lloguer.quantitat();
-
 			// calculamos las bonificaciones
 			bonificacions += lloguer.bonificacions();
 
 			// composa els resultats d'aquest lloguer
 			resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": "
-					+ (quantitat * 30) + "€" + "\n";
+					+ (lloguer.quantitat() * 30) + "€" + "\n";
 		}
 
 		// afegeix informació final
