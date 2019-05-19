@@ -1,2 +1,5 @@
-En el git hay 2 colaboradores pero los 2 son el mismo ya que tengo 2 cuentas
-la general AndresLQ1987 y la de andreslq es la que hicimos en clases.
+Ejercicios de M5
+
+ejercicios para practicar y conocer las tecnicas de refactoring.
+
+Contribuidores 1 aunque con 2 cuentas distintas AndresLQ1987 y andreslq.
