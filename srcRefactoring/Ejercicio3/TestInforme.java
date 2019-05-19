@@ -29,6 +29,9 @@ public class TestInforme {
 		
 		String esperado = "<h1>Informe de lloguers<h1>\n" +
 						  "<p>Informe de lloguers del client <em>Andres</em> (<strong>12345789T</strong>)</p>\n" +
+						  "<table>\n" +
+						  "\t<tr><td><strong>Marca</strong></td><td><strong>Model</strong></td><td><strong>Import</strong></td></tr>\n" +
+						  "</table>" +
 						  "<p>Import a pagar: <em>0.0€</em></p>\n" + 
 						  "<p>Punts guanyats: <em>0</em></p>\n";
 		
