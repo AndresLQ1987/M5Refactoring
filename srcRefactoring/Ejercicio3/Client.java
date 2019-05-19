@@ -76,7 +76,7 @@ public class Client {
 		String detall = "";
 		for (Lloguer lloguer : lloguers) {
 			detall += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": "
-					+ (lloguer.quantitat() * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
+					+ (lloguer.preu() * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
 		}
 		return detall;
 	}
@@ -96,7 +96,7 @@ public class Client {
 	private double importTotal() {
 		double total = 0;
 		for (Lloguer lloguer : lloguers) {
-			double quantitat = lloguer.quantitat();
+			double quantitat = lloguer.preu();
 			total += quantitat * EUROS_PER_UNITAT_DE_COST;
 		}
 		return total;

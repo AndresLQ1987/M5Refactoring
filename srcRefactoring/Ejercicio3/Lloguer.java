@@ -3,6 +3,14 @@ package Ejercicio3;
 import java.util.Date;
 
 public class Lloguer {
+	
+	private int MIN_QUANTITAT_BASIC = 3;
+	private int MIN_QUANTITAT_GENERAL = 4;
+	private int DIES_MATEIX_PREU_BASIC = 3;
+	private int DIES_MATEIX_PREU_GENERAL = 2;
+	private double PREU_PER_DIA_BASIC = 1.5;
+	private double PREU_PER_DIA_GENERAL = 2.5;
+	private double PREU_PER_DIA_LUXE = 6;
 
 	private Date data;
 	private int dies;
@@ -59,23 +67,23 @@ public class Lloguer {
 	 * quantitat y el sabe sus atributos por lo que no es necesario pasarselo por
 	 * parametros.
 	 */
-	public double quantitat() {
+	public double preu() {
 		double quantitat = 0;
 		switch (vehicle.getCategoria()) {
 		case BASIC:
-			quantitat += 3;
-			if (dies > 3) {
-				quantitat += (dies - 3) * 1.5;
+			quantitat += MIN_QUANTITAT_BASIC;
+			if (dies > DIES_MATEIX_PREU_BASIC) {
+				quantitat += (dies - DIES_MATEIX_PREU_BASIC) * PREU_PER_DIA_BASIC;
 			}
 			break;
 		case GENERAL:
-			quantitat += 4;
-			if (dies > 2) {
-				quantitat += (dies - 2) * 2.5;
+			quantitat += MIN_QUANTITAT_GENERAL;
+			if (dies > DIES_MATEIX_PREU_GENERAL) {
+				quantitat += (dies - DIES_MATEIX_PREU_GENERAL) * PREU_PER_DIA_GENERAL;
 			}
 			break;
 		case LUXE:
-			quantitat += dies * 6;
+			quantitat += dies * PREU_PER_DIA_LUXE;
 			break;
 		}
 		return quantitat;
