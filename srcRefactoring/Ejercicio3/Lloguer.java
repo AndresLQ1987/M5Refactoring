@@ -60,23 +60,24 @@ public class Lloguer {
 	 *  parametros.
 	 */
 	public double quantitat() {
+		double quantitat = 0;
 		switch (vehicle.getCategoria()) {
         case BASIC:
+            quantitat += 3;
             if (dies > 3) {
-            	return dies * 1.5;
-            } else {
-            	return 3;
+                quantitat += (dies - 3) * 1.5;
             }
+            break;
         case GENERAL:
+            quantitat += 4;
             if (dies > 2) {
-                return 4 + (dies - 2) * 2.5;
-            } else {
-            	return 4;
+                quantitat += (dies - 2) * 2.5;
             }
+            break;
         case LUXE:
-            return dies * 6;
-        default:
-        	return dies;
+            quantitat += dies * 6;
+            break;
 		}
+		return quantitat;
 	}
 }
