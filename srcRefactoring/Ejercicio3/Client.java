@@ -7,6 +7,8 @@ public class Client {
 	private String nom;
 	private String telefon;
 	private ArrayList<Lloguer> lloguers;
+	
+	private static final double EUROS_PER_UNITAT_DE_COST = 30;
 
 	public Client(String nif, String nom, String telefon) {
 		this.nif = nif;
@@ -73,7 +75,7 @@ public class Client {
 		String detall = "";
 		for (Lloguer lloguer : lloguers) {
 			detall += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": "
-					+ (lloguer.quantitat() * 30) + "€" + "\n";
+					+ (lloguer.quantitat() * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
 		}
 		return detall;
 	}
@@ -94,7 +96,7 @@ public class Client {
 		double total = 0;
 		for (Lloguer lloguer : lloguers) {
 			double quantitat = lloguer.quantitat();
-			total += quantitat * 30;
+			total += quantitat * EUROS_PER_UNITAT_DE_COST;
 		}
 		return total;
 	}
