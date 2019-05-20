@@ -253,9 +253,7 @@ public class TestInforme {
 	public void clientAmbUnSolLloguerGeneralAmbPocsDies() throws ParseException {
 
 		// creamos el vehiculo de prueba
-		Vehicle coche1 = new Vehicle("N		SimpleDateFormat dateFormat = new SimpleDateFormat(\"d/M/yyyy\");\n" + 
-				"		fechaLloguer1 = dateFormat.parse(\"15/7/2018\");\n" + 
-				"issan", "SkyLine", Vehicle.GENERAL);
+		Vehicle coche1 = new Vehicle("Nissan", "SkyLine", Vehicle.GENERAL);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
