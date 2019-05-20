@@ -1,5 +1,6 @@
 package Ejercicio3;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.junit.*;
@@ -34,19 +35,15 @@ public class TestInforme {
 	}
 
 	@Test
-	public void clientAmbUnSolLloguerBasic() {
+	public void clientAmbUnSolLloguerBasic() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Volkswagen", "Polo", Vehicle.BASIC);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("24/5/2009");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("24/5/2009");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 130);
@@ -72,19 +69,15 @@ public class TestInforme {
 	}
 	
 	@Test
-	public void clientAmbUnSolLloguerBasicHTML() {
+	public void clientAmbUnSolLloguerBasicHTML() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Volkswagen", "Polo", Vehicle.BASIC);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("24/5/2009");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("24/5/2009");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 130);
@@ -114,19 +107,15 @@ public class TestInforme {
 	}
 
 	@Test
-	public void clientAmbUnSolLloguerBasicYPocsDies() {
+	public void clientAmbUnSolLloguerBasicYPocsDies() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Volkswagen", "Polo", Vehicle.BASIC);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("24/5/2009");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("24/5/2009");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 1);
@@ -151,19 +140,15 @@ public class TestInforme {
 	}
 	
 	@Test
-	public void clientAmbUnSolLloguerBasicYPocsDiesHTML() {
+	public void clientAmbUnSolLloguerBasicYPocsDiesHTML() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Volkswagen", "Polo", Vehicle.BASIC);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("24/5/2009");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("24/5/2009");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 1);
@@ -193,19 +178,15 @@ public class TestInforme {
 	}
 	
 	@Test
-	public void clientAmbUnSolLloguerGeneral() {
+	public void clientAmbUnSolLloguerGeneral() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Nissan", "SkyLine", Vehicle.GENERAL);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("10/6/2012");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("10/6/2012");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 60);
@@ -231,19 +212,15 @@ public class TestInforme {
 	}
 	
 	@Test
-	public void clientAmbUnSolLloguerGeneralHTML() {
+	public void clientAmbUnSolLloguerGeneralHTML() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Nissan", "SkyLine", Vehicle.GENERAL);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("10/6/2012");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("10/6/2012");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 60);
@@ -273,19 +250,17 @@ public class TestInforme {
 	}
 	
 	@Test
-	public void clientAmbUnSolLloguerGeneralAmbPocsDies() {
+	public void clientAmbUnSolLloguerGeneralAmbPocsDies() throws ParseException {
 
 		// creamos el vehiculo de prueba
-		Vehicle coche1 = new Vehicle("Nissan", "SkyLine", Vehicle.GENERAL);
+		Vehicle coche1 = new Vehicle("N		SimpleDateFormat dateFormat = new SimpleDateFormat(\"d/M/yyyy\");\n" + 
+				"		fechaLloguer1 = dateFormat.parse(\"15/7/2018\");\n" + 
+				"issan", "SkyLine", Vehicle.GENERAL);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("10/6/2012");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("10/6/2012");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 1);
@@ -311,19 +286,15 @@ public class TestInforme {
 	}
 	
 	@Test
-	public void clientAmbUnSolLloguerGeneralAmbPocsDiesHTML() {
+	public void clientAmbUnSolLloguerGeneralAmbPocsDiesHTML() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Nissan", "SkyLine", Vehicle.GENERAL);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("10/6/2012");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("10/6/2012");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 1);
@@ -352,19 +323,15 @@ public class TestInforme {
 	}
 	
 	@Test
-	public void clientAmbUnSolLloguerLuxe() {
+	public void clientAmbUnSolLloguerLuxe() throws ParseException{
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Bugatti", "Iberion", Vehicle.LUXE);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("15/7/2018");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("15/7/2018");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 5);
@@ -390,19 +357,15 @@ public class TestInforme {
 	}
 	
 	@Test
-	public void clientAmbUnSolLloguerLuxeHTML() {
+	public void clientAmbUnSolLloguerLuxeHTML() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Bugatti", "Iberion", Vehicle.LUXE);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("15/7/2018");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("15/7/2018");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 5);
@@ -431,19 +394,15 @@ public class TestInforme {
 	}
 
 	@Test
-	public void clientAmbUnSolLloguerLuxeAmbPocsDies() {
+	public void clientAmbUnSolLloguerLuxeAmbPocsDies() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Bugatti", "Iberion", Vehicle.LUXE);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("15/7/2018");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("15/7/2018");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 1);
@@ -469,19 +428,15 @@ public class TestInforme {
 	}
 	
 	@Test
-	public void clientAmbUnSolLloguerLuxeAmbPocsDiesHTML() {
+	public void clientAmbUnSolLloguerLuxeAmbPocsDiesHTML() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Bugatti", "Iberion", Vehicle.LUXE);
 
 		// creamos las fechas de los alquileres de prueba
 		Date fechaLloguer1 = null;
-		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat.parse("15/7/2018");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat.parse("15/7/2018");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 1);
@@ -510,7 +465,7 @@ public class TestInforme {
 	}
 	
 	@Test
-	public void informeCompleto() {
+	public void informeCompleto() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Volkswagen", "Polo", Vehicle.BASIC);
@@ -521,16 +476,12 @@ public class TestInforme {
 		Date fechaLloguer1 = null;
 		Date fechaLloguer2 = null;
 		Date fechaLloguer3 = null;
-		try {
-			SimpleDateFormat dateFormat1 = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat1.parse("24/5/2009");
-			SimpleDateFormat dateFormat2 = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer2 = dateFormat2.parse("10/6/2012");
-			SimpleDateFormat dateFormat3 = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer3 = dateFormat3.parse("15/7/2018");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat1 = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat1.parse("24/5/2009");
+		SimpleDateFormat dateFormat2 = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer2 = dateFormat2.parse("10/6/2012");
+		SimpleDateFormat dateFormat3 = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer3 = dateFormat3.parse("15/7/2018");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 130);
@@ -564,7 +515,7 @@ public class TestInforme {
 	}
 	
 	@Test
-	public void informeCompletoHTML() {
+	public void informeCompletoHTML() throws ParseException {
 
 		// creamos el vehiculo de prueba
 		Vehicle coche1 = new Vehicle("Volkswagen", "Polo", Vehicle.BASIC);
@@ -575,16 +526,12 @@ public class TestInforme {
 		Date fechaLloguer1 = null;
 		Date fechaLloguer2 = null;
 		Date fechaLloguer3 = null;
-		try {
-			SimpleDateFormat dateFormat1 = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer1 = dateFormat1.parse("24/5/2009");
-			SimpleDateFormat dateFormat2 = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer2 = dateFormat2.parse("10/6/2012");
-			SimpleDateFormat dateFormat3 = new SimpleDateFormat("d/M/yyyy");
-			fechaLloguer3 = dateFormat3.parse("15/7/2018");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SimpleDateFormat dateFormat1 = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer1 = dateFormat1.parse("24/5/2009");
+		SimpleDateFormat dateFormat2 = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer2 = dateFormat2.parse("10/6/2012");
+		SimpleDateFormat dateFormat3 = new SimpleDateFormat("d/M/yyyy");
+		fechaLloguer3 = dateFormat3.parse("15/7/2018");
 
 		// creamos el alquiler de prueba
 		Lloguer lloguer1 = new Lloguer(fechaLloguer1, 130);
