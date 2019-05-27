@@ -54,7 +54,7 @@ public class Lloguer {
 		setVehicle(null);
 	}
 
-	public boolean teLloguer() {
+	public boolean teVehicle() {
 		if (vehicle != null) {
 			return true;
 		} else {
