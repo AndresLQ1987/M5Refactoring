@@ -50,7 +50,7 @@ public class Lloguer {
 		setVehicle(v);
 	}
 
-	public void eliminaLloguer() {
+	public void eliminaVehicle() {
 		setVehicle(null);
 	}
 
